@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fef8ff;
+    font-family: "Comic Sans MS", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #puppy-playground {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .puppy-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: move 5s linear infinite;
+  }
+  
+  .puppy {
+    width: 80px;
+    height: 80px;
+    animation: wag-tail 1s infinite ease-in-out;
+  }
+  
+  .puppy-name {
+    margin-top: 10px;
+    color: #6a0dad;
+    font-size: 14px;
+  }
+  
+  @keyframes wag-tail {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(50px, -20px);
+    }
+    50% {
+      transform: translate(100px, 50px);
+    }
+    75% {
+      transform: translate(-50px, 30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .puppy.sniff {
+    animation: sniff 0.5s ease-in-out;
+  }
+  
+  @keyframes sniff {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  #ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    animation: bounce 0.5s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .happiness-bar-container {
+    width: 100%;
+    height: 10px;
+    background: lightgray;
+    margin-top: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .happiness-bar {
+    height: 100%;
+    background: green;
+    width: 100%;
+    transition: width 0.5s;
+  }
+  
+  .puppy.sad {
+    filter: grayscale(100%);
+  }
+  
+  .holiday-hat {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

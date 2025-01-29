@@ -1,0 +1,28 @@
+{
+  "name": "puppy-pals",
+  "displayName": "Puppy Pals",
+  "description": "Pixelated puppy avatars that keep you company while coding!",
+  "version": "0.0.1",
+  "publisher": "Rushali",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "main": "./src/extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "puppyPanel",
+          "name": "Puppy Pals"
+        }
+      ]
+    }
+  },
+  "activationEvents": ["*"],
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "start": "node ./src/extension.js"
+  },
+  "dependencies": {}
+}
